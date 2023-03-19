@@ -1,0 +1,37 @@
+.ChatInput-submit_container {
+  display: flex;
+  padding: 8px;
+  align-items: flex-end;
+  background-color: var(--vscode-input-background);
+}
+
+.ChatInput-submit_button {
+  width: fit-content;
+  height: fit-content;
+  svg {
+    width: 18px;
+    height: 15px;
+  }
+}
+
+.ChatInput-hints {
+  margin-top: 4px;
+  color: var(--vscode-checkbox-border);
+
+  &.error {
+    color: var(--vscode-errorForeground);
+  }
+}
+
+.ChatInput-submit_input {
+  resize: none;
+  overflow: hidden;
+  align-self: center;
+  font-size: 16px;
+  line-height: 19px;
+  height: 30px;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,26 @@
+@import "./base/reset.css";
+@import "./base/vscode.css";
+
+// Components
+@import "./ChatInput.scss";
+@import "./ChatView.scss";
+
+html,
+body,
+#app,
+main {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@gpt-pilote/webview",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "clean": "rm -rf build",
+    "lint": "eslint --ext .tsx,.ts app",
+    "check-types": "tsc --noEmit",
+    "fclean": "pnpm clean && rm -rf node_modules .turbo"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "vite": "^4.2.0"
+  },
+  "devDependencies": {
+    "@gpt-pilote/eslint-config-custom": "workspace:*",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "sass": "^1.59.3",
+    "typescript": "^4.9.5"
+  }
+}

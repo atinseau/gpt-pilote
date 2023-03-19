@@ -10,10 +10,10 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'media/app/index.tsx'),
+      entry: path.resolve(__dirname, 'app/index.tsx'),
       formats: ['cjs'],
       fileName: 'index',
     },
-    outDir: path.resolve(__dirname, 'media/build'),
+    outDir: path.resolve(__dirname, 'build'),
   },
 });

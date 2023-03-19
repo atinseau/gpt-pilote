@@ -21,7 +21,6 @@ class MainWbProvider {
         enableScripts: true,
       },
     );
-
     this.getWebViewContent();
   }
 
@@ -56,12 +55,9 @@ class MainWbProvider {
     const htmlBuffer = await vscode.workspace.fs.readFile(htmlFile);
     const html = Buffer.from(htmlBuffer).toString('utf8');
 
-    console.log(this.loadScriptAssets());
-
     const htmlWithAssets = html
       .replace('<!-- CSS -->', this.loadCssAssets())
       .replace('<!-- JS -->', this.loadScriptAssets());
-
     this.panel.webview.html = htmlWithAssets;
   }
 }

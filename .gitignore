@@ -1,7 +1,4 @@
-out
-dist
 node_modules
-.vscode-test/
-*.vsix
-
-media/build
+build
+pnpm-lock.yaml
+.turbo
