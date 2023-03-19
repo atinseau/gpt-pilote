@@ -25,10 +25,13 @@
     "build": "turbo build",
     "clean": "turbo clean --parallel",
     "fclean": "turbo fclean --parallel && rm -rf node_modules pnpm-lock.yaml",
+    "check-types": "turbo check-types",
     "lint": "turbo lint",
-    "re": "pnpm fclean && pnpm install"
+    "re": "pnpm fclean && pnpm install",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
     "turbo": "^1.8.3"
   }
 }

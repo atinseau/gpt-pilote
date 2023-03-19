@@ -20,6 +20,10 @@
     "lint": {
       "outputs": [],
       "cache": false
+    },
+    "check-types": {
+      "outputs": [],
+      "cache": false
     }
   }
 }

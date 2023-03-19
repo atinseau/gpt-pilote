@@ -1,6 +1,5 @@
 import React, {
   useCallback,
-  useEffect,
   useMemo,
   useState,
 } from 'react';
@@ -53,10 +52,9 @@ const isToday = (date: Date) => {
 const ChatProvider: React.FC<Props> = ({ children }) => {
   const [themes, setThemes] = useState<Theme[]>([]);
   const [themeId, setThemeId] = useState(-1);
-  const [conversations, setConversations] = useState<ConversationWithTheme[] | null>(null);
+  const [conversations] = useState<ConversationWithTheme[] | null>(null);
 
   const send = useCallback((message: string) => {
-    console.log(message);
     if (themeId === -1) {
       const newTheme = createTheme('Nouvelle thématique', message);
       setThemes((prev) => {
@@ -80,10 +78,6 @@ const ChatProvider: React.FC<Props> = ({ children }) => {
     send,
     conversations,
   } as IChatContext), [send, conversations]);
-
-  useEffect(() => {
-    console.log(conversations);
-  }, [conversations]);
 
   return (
     <ChatContext.Provider value={defaultContext}>

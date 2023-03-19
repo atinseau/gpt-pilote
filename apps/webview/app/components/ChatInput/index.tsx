@@ -20,8 +20,6 @@ const ChatInput: React.FC<Props> = ({ onSend }) => {
   const value = useRef('');
   const [hints, setHints] = useState<keyof typeof availableHints>('press');
 
-  console.log('ChatInput render');
-
   const handleSend = useCallback(() => {
     if (!textareaRef.current) return;
     if (!value.current.length) {

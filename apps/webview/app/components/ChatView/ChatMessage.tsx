@@ -6,8 +6,6 @@ interface Props {
 }
 
 const ChatMessage: React.FC<Props> = ({ message }) => {
-  console.log('ChatMessage render');
-
   const { isLocal, content, timestamp } = message;
   return (
     <li className={classNames('ChatMessage', isLocal ? 'local' : 'remote')}>
