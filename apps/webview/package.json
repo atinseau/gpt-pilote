@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@gpt-pilote/eslint-config-custom": "workspace:*",
+    "@gpt-pilote/types": "workspace:*",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "sass": "^1.59.3",

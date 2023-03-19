@@ -13,7 +13,10 @@
 		],
 		"sourceMap": true,
 		"baseUrl": ".",
-		"strict": true
+		"strict": true,
+		"types": [
+			"@gpt-pilote/types"
+		]
 	},
 	"include": [
 		"app",

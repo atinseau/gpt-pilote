@@ -1,3 +1,5 @@
+/// <reference path="./vscode.d.ts" />
+
 declare global {
   interface Message {
     isLocal: boolean

@@ -1,0 +1,9 @@
+{
+  "name": "@gpt-pilote/types",
+  "version": "0.0.1",
+  "private": true,
+  "types": "src/global.d.ts",
+  "devDependencies": {
+    "@gpt-pilote/eslint-config-custom": "workspace:*"
+  }
+}
