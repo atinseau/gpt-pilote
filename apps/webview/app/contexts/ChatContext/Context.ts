@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 interface IChatContext {
   send: (message: string) => void
-  conversations: Conversation[] | null
+  messages: Message[]
 }
 
 const ChatContext = createContext({} as IChatContext);

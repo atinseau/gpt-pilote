@@ -6,15 +6,9 @@ declare global {
     content: string
     timestamp: string
   }
-
   interface Conversation {
     messages: Message[]
     date: Date
-  }
-
-  interface Theme {
-    name: string
-    conversations: Conversation[]
   }
 }
 

@@ -10,7 +10,7 @@ interface ScriptAsset {
 class MainWbProvider {
   private readonly panel: vscode.WebviewPanel;
 
-  private readonly MEDIA_PATH = `${this.context.extensionPath}/media`;
+  private readonly WEBVIEW_PATH = `${this.context.extensionPath}/apps/webview`;
 
   constructor(private context: vscode.ExtensionContext) {
     this.panel = vscode.window.createWebviewPanel(
@@ -28,7 +28,7 @@ class MainWbProvider {
     const cssAssets = ['/build/style.css'];
 
     return cssAssets.map((cssAsset) => {
-      const cssFile = vscode.Uri.file(`${this.MEDIA_PATH}${cssAsset}`);
+      const cssFile = vscode.Uri.file(`${this.WEBVIEW_PATH}${cssAsset}`);
       const cssUri = this.panel.webview.asWebviewUri(cssFile);
       return `<link rel="stylesheet" href="${cssUri.toString()}">`;
     }).join('');
@@ -44,14 +44,14 @@ class MainWbProvider {
     ];
 
     return scriptAssets.map((scriptAsset) => {
-      const scriptFile = vscode.Uri.file(`${this.MEDIA_PATH}${scriptAsset.src}`);
+      const scriptFile = vscode.Uri.file(`${this.WEBVIEW_PATH}${scriptAsset.src}`);
       const scriptUri = this.panel.webview.asWebviewUri(scriptFile);
       return `<script ${scriptAsset.async ? 'async ' : ''}${scriptAsset.defer ? 'defer ' : ''}${scriptAsset.type ? `type=${scriptAsset.type} ` : ''}src="${scriptUri}"></script>`;
     }).join('');
   }
 
   private async getWebViewContent() {
-    const htmlFile = vscode.Uri.file(`${this.MEDIA_PATH}/assets/base.html`);
+    const htmlFile = vscode.Uri.file(`${this.WEBVIEW_PATH}/assets/base.html`);
     const htmlBuffer = await vscode.workspace.fs.readFile(htmlFile);
     const html = Buffer.from(htmlBuffer).toString('utf8');
 

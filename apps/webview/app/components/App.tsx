@@ -12,7 +12,7 @@ const App: React.FC = () => {
 
   return (
     <main>
-      <ChatView conversations={chat.conversations} />
+      <ChatView conversations={[{ messages: chat.messages, date: new Date() }]} />
       <ChatInput onSend={handleSend} />
     </main>
   );
